@@ -78,6 +78,7 @@ jobs:
             ghcr.io/madhukamesh/${{ matrix.projects }}
           tags: |
             ${{ github.sha }}
+            ${{ steps.get_latest_tag.outputs.latest_tag }}
             type=ref,event=branch
             type=ref,event=tag
             type=raw,value=latest
